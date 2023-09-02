@@ -17,15 +17,15 @@ LY = "QQ:997788733_LuoYe"
 ----------------        罗技G系列鼠标侧键     ------------------------------
 --------------------------------------------------------------------------
 -- 如果你是G-HUB罗技驱动，不要乱改位置和侧键编号，会导致失灵
-fastloot_key = 5 -- Nút để loot nhanh
-mouseX1 = 10000 -- Mouse is at (10000, 9000)
+fastloot_key = 6 -- Nút để loot nhanh
+mouseX1 = 8700 -- Mouse is at (10000, 9000)
 mouseY1 = 9000
 mouseX2 = 50000 -- Mouse is at (50000, 9000)
-mouseY2 = 9000
-m416_cdk_luoye = nil
+mouseY2 = 23000
+m416_cdk_luoye = 5
 ump9_cdk_luoye = 7
 pp19_cdk_luoye = 9
-gb_cdk_luoye = 6       -- 关闭所有压枪	
+gb_cdk_luoye = 4       -- 关闭所有压枪	
 liandian2_liandian = 0 -- 支持M16、SKS、SLR、MINI连点功能（兼容模式，偶然会出现卡主，支持G-HUB使用，小幅度协助压枪）
 --------------------------------------------------------------------------
 ----------------    第二组侧键（CTRL+鼠标侧键）------------------------------
@@ -675,9 +675,9 @@ function OnEvent(event, arg)
             MoveMouseTo(mouseX1, mouseY1)
             PressMouseButton(1)
             MoveMouseTo(mouseX2, mouseY2)
-            Sleep(10)
+            Sleep(5)
             ReleaseMouseButton(1)
-            Sleep(15)
+            Sleep(5)
         end
     end
     if GetDate() < aa and GetDate() > bb and on or not cc then
